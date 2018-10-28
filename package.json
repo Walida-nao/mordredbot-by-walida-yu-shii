@@ -1,0 +1,22 @@
+{
+  "name": "Mordred",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Walida(Nao) & Yu-shii(Yu)",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-art": "^1.4.4",
+    "discord.js": "^11.4.2",
+    "ffmpeg": "0.0.4",
+    "mathjs": "^5.2.2",
+    "moment": "^2.22.2",
+    "nekos.life": "^1.1.4",
+    "ytdl-core": "^0.24.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
