@@ -1,17 +1,16 @@
-const ascii = require('ascii-art')
+const figlet = require('figlet');
 module.exports.run = async (Discord, client, message, args) => {
 
+        let texte = args.join(' ');
 
-        
-        ascii.font(args.join(' '), 'Doom', function(rendered){
-                rendered = rendered.trimRight();
 
-                if(rendered.lenght < 1) return message.channel.send('```!ascii [message] \n -------------------\n let your message get into ascii | if the msg is too long it will not be convert ')
-                if (rendered.lenght > 2000) return message.channel.send('Too long !');
-
-                message.channel.send(rendered, {
-                        code: 'md'
-                })
-        });
-        //if ascii doesn't look good you can also try to |npm i figlet| it look better
-}
+        if (!texte) return message.channel.send("```!ascii [text]\n ---------------------\n let you transform a short text into ascii```");
+        figlet.text(texte, {font: 'Ghost'},function(err, data) {
+                if (err) {
+                    console.log('Something went wrong...');
+                    console.dir(err);
+                    return;
+                }
+                message.channel.sendCode("ascii", data)
+            });
+        };
