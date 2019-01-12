@@ -1,5 +1,5 @@
 {
 "token" : "your BOT token",
-"prefix" : "!",
+"prefix" : "m!",
 "ownerID" : "your id"
 }
